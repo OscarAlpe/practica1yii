@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use yii\data\ActiveDataProvider;
 use app\models\Emple;
+use \app\models\Depart;
 
 class SiteController extends Controller
 {
@@ -49,6 +50,20 @@ class SiteController extends Controller
             'descripcion' => 'SELECT * FROM emple',
             'dataProvider' => $dataProvider,
             'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
+        ]);
+    }
+
+    public function actionConsulta2() {
+        $query = Depart::find()->select("depart.*");
+        
+        $dataProvider = $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+        ]);
+        return $this->render('_index', [
+            'titulo' => 'Consulta 2',
+            'descripcion' => 'SELECT * FROM depart',
+            'dataProvider' => $dataProvider,
+            'columnas' => [],
         ]);
     }
 }
