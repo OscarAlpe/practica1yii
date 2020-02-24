@@ -213,4 +213,25 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta11() {
+        $count = Yii::$app->db
+                ->createCommand('SELECT COUNT(*) FROM emple')
+                ->queryScalar();
+
+        $dataProvider = new SqlDataProvider([
+                'sql' => 'SELECT * FROM emple ORDER BY dept_no DESC, apellido ASC',
+                'totalCount' => $count,
+                'pagination' => [
+                    'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 10',
+            'descripcion' => 'SELECT * FROM depart ORDER BY dept_no DESC',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
+        ]);
+    }
+
 }
