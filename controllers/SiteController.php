@@ -255,4 +255,22 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta13() {
+        $query = Emple::find()->select("emp_no")->where([">","salario","2000"]);
+
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                    'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 13',
+            'descripcion' => 'SELECT emp_no FROM emple WHERE salario > 2000',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['emp_no'],
+        ]);
+    }
+
 }
