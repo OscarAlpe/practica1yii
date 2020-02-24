@@ -19,7 +19,7 @@ use Yii;
  * @property Depart $deptNo
  */
 class Emple extends \yii\db\ActiveRecord
-{
+{   
     /**
      * {@inheritdoc}
      */
@@ -70,4 +70,5 @@ class Emple extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Depart::className(), ['dept_no' => 'dept_no']);
     }
+
 }

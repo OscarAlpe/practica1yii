@@ -366,4 +366,25 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta24() {
+        $count = Yii::$app->db
+                ->createCommand('SELECT COUNT(DISTINCT MONTH(fecha_alt)) FROM emple')
+                ->queryScalar();
+
+        $dataProvider = new SqlDataProvider([
+                'sql' => 'SELECT DISTINCT MONTH(fecha_alt) as mes FROM emple',
+                'totalCount' => $count,
+                'pagination' => [
+                    'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 24',
+            'descripcion' => "SELECT DISTINCT MONTH(fecha_alt) FROM emple",
+            'dataProvider' => $dataProvider,
+            'columnas' => ['mes:integer:Mes'],
+        ]);
+    }
+
 }

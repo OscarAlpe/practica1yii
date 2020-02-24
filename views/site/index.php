@@ -179,4 +179,15 @@ use yii\helpers\Html;
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Consulta 24</h3>
+            <p>Mostrar un listado de los distintos meses en que los empleados se han dado de alta</p>
+            <p><?= Html::a('Consulta 24', ['/site/consulta24'], ['class'=>'btn btn-primary grid-button']) ?></p>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
