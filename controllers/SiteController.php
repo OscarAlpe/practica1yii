@@ -130,4 +130,16 @@ class SiteController extends Controller
         ]);
     }
     
+    public function actionConsulta6() {
+        $provider = new SqlDataProvider([
+            'sql' => 'SELECT COUNT(*) FROM emple',
+        ]);
+              
+        return $this->render('_index', [
+            'titulo' => 'Consulta 6',
+            'descripcion' => 'SELECT COUNT(*) FROM emple',
+            'dataProvider' => $provider,
+            'columnas' => [],
+        ]);
+    }
 }
