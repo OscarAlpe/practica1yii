@@ -327,4 +327,22 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta17() {
+        $query = Emple::find()->select(["emple.*"])->where(["=", "oficio", "ANALISTA"])->andWhere([">", "salario", "2000"]);
+
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                    'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 17',
+            'descripcion' => "SELECT * FROM emple WHERE oficio = 'ANALISTA' AND salario > 2000",
+            'dataProvider' => $dataProvider,
+            'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
+        ]);
+    }
+
 }
