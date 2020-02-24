@@ -427,4 +427,19 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta30() {
+        $query = Emple::find()->select(["dept_no", "COUNT(emp_no) as total"])->groupBy("dept_no");
+
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 30',
+            'descripcion' => "SELECT dept_no, COUNT(emp_no) FROM emple GROUP BY dept_no",
+            'dataProvider' => $dataProvider,
+            'columnas' => ['dept_no', 'total:integer:NUMERO_DE_EMPLEADOS'],
+        ]);
+    }
+
 }

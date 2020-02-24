@@ -198,5 +198,14 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Consulta 30</h3>
+            <p>Listar el número de empleados por departamento</p>
+            <p><?= Html::a('Consulta 30', ['/site/consulta30'], ['class'=>'btn btn-primary grid-button']) ?></p>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
