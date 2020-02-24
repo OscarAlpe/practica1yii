@@ -106,8 +106,17 @@ use yii\helpers\Html;
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 11</h3>
+            <p>Datos de los empleados ordenados por número de departamento descendentemente y por oficio ascendente</p>
+            <p><?= Html::a('Consulta 11', ['/site/consulta11'], ['class'=>'btn btn-primary grid-button']) ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Consulta 12</h3>
             <p>Datos de los empleados ordenados por número de departamento descendentemente y por apellido ascendentemente</p>
-            <p><?= Html::a('Consulta 10', ['/site/consulta10'], ['class'=>'btn btn-primary grid-button']) ?></p>
+            <p><?= Html::a('Consulta 12', ['/site/consulta12'], ['class'=>'btn btn-primary grid-button']) ?></p>
           </div>
         </div>
       </div>

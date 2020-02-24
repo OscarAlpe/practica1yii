@@ -219,6 +219,27 @@ class SiteController extends Controller
                 ->queryScalar();
 
         $dataProvider = new SqlDataProvider([
+                'sql' => 'SELECT * FROM emple ORDER BY dept_no DESC, oficio ASC',
+                'totalCount' => $count,
+                'pagination' => [
+                    'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 11',
+            'descripcion' => 'SELECT * FROM emple ORDER BY dept_no DESC, oficio ASC',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
+        ]);
+    }
+
+    public function actionConsulta12() {
+        $count = Yii::$app->db
+                ->createCommand('SELECT COUNT(*) FROM emple')
+                ->queryScalar();
+
+        $dataProvider = new SqlDataProvider([
                 'sql' => 'SELECT * FROM emple ORDER BY dept_no DESC, apellido ASC',
                 'totalCount' => $count,
                 'pagination' => [
@@ -227,8 +248,8 @@ class SiteController extends Controller
         ]);
         
         return $this->render('_index', [
-            'titulo' => 'Consulta 10',
-            'descripcion' => 'SELECT * FROM depart ORDER BY dept_no DESC',
+            'titulo' => 'Consulta 12',
+            'descripcion' => 'SELECT * FROM emple ORDER BY dept_no DESC, apellido ASC',
             'dataProvider' => $dataProvider,
             'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
         ]);
