@@ -142,4 +142,23 @@ class SiteController extends Controller
             'columnas' => [],
         ]);
     }
+
+    public function actionConsulta7() {
+        $query = Emple::find()->select("emple.*")->orderBy(["apellido" => SORT_ASC]);
+        
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                  'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 7',
+            'descripcion' => 'SELECT * FROM emple ORDER BY apellido ASC',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
+        ]);
+    }
+
 }

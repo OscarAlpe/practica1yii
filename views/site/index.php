@@ -63,4 +63,15 @@ use yii\helpers\Html;
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>Consulta 7</h3>
+        <p>Mostar Datos de los empleados ordenados por apellidos de forma ascendente</p>
+        <p><?= Html::a('Consulta 7', ['/site/consulta7'], ['class'=>'btn btn-primary grid-button']) ?></p>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
