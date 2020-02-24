@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 use yii\data\ActiveDataProvider;
 use app\models\Emple;
 use \app\models\Depart;
+use yii\data\SqlDataProvider;
 
 class SiteController extends Controller
 {
@@ -42,9 +43,13 @@ class SiteController extends Controller
     public function actionConsulta1() {
         $query = Emple::find()->select("emple.*");
         
-        $dataProvider = $dataProvider = new ActiveDataProvider([
+        $dataProvider = new ActiveDataProvider([
                 'query' => $query,
+                'pagination' => [
+                  'pageSize' => 2,
+                ],
         ]);
+        
         return $this->render('_index', [
             'titulo' => 'Consulta 1',
             'descripcion' => 'SELECT * FROM emple',
@@ -56,14 +61,37 @@ class SiteController extends Controller
     public function actionConsulta2() {
         $query = Depart::find()->select("depart.*");
         
-        $dataProvider = $dataProvider = new ActiveDataProvider([
+        $dataProvider = new ActiveDataProvider([
                 'query' => $query,
+                'pagination' => [
+                  'pageSize' => 2,
+                ],
         ]);
+        
         return $this->render('_index', [
             'titulo' => 'Consulta 2',
             'descripcion' => 'SELECT * FROM depart',
             'dataProvider' => $dataProvider,
-            'columnas' => [],
+            'columnas' => ['dept_no', 'dnombre', 'loc'],
         ]);
     }
+    
+    public function actionConsulta3() {
+        $query = Emple::find()->select("apellido, oficio");
+        
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                  'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 3',
+            'descripcion' => 'SELECT apellido, oficio FROM emple',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['apellido', 'oficio'],
+        ]);
+    }
+
 }
