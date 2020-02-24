@@ -345,4 +345,25 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta22() {
+        $count = Yii::$app->db
+                ->createCommand('SELECT COUNT(apellido) FROM emple WHERE salario = (SELECT MAX(salario) FROM emple)')
+                ->queryScalar();
+
+        $dataProvider = new SqlDataProvider([
+                'sql' => 'SELECT apellido FROM emple WHERE salario = (SELECT MAX(salario) FROM emple)',
+                'totalCount' => $count,
+                'pagination' => [
+                    'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 22',
+            'descripcion' => "SELECT apellido FROM emple WHERE salario = (SELECT MAX(salario) FROM emple)",
+            'dataProvider' => $dataProvider,
+            'columnas' => ['apellido'],
+        ]);
+    }
+
 }
