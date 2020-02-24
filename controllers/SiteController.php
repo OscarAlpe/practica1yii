@@ -94,4 +94,22 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta4() {
+        $query = Depart::find()->select("loc, dept_no");
+        
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                  'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 4',
+            'descripcion' => 'SELECT loc, dept_no FROM depart',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['loc', 'dept_no'],
+        ]);
+    }
+
 }
