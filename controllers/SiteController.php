@@ -112,4 +112,22 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta5() {
+        $query = Depart::find()->select("dept_no, dnombre, loc");
+        
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                  'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 5',
+            'descripcion' => 'SELECT dept_no, dnombre, loc FROM depart',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['dept_no', 'dnombre', 'loc'],
+        ]);
+    }
+    
 }

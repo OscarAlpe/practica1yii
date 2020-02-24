@@ -44,5 +44,14 @@ use yii\helpers\Html;
       </div>
     </div>
   </div>
+  <div class="col-sm-4">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>Consulta 5</h3>
+        <p>Mostrar número, nombre y localización de cada Departamento</p>
+        <p><?= Html::a('Consulta 5', ['/site/consulta5'], ['class'=>'btn btn-primary grid-button']) ?></p>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
