@@ -20,6 +20,10 @@ use Yii;
  */
 class Emple extends \yii\db\ActiveRecord
 {   
+    
+    public $total;
+    
+    
     /**
      * {@inheritdoc}
      */

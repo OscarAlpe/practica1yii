@@ -189,5 +189,14 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Consulta 28</h3>
+            <p>Realizar un listado donde nos coloque el apellido del empleado y el nombre del departamento al que pertenece</p>
+            <p><?= Html::a('Consulta 28', ['/site/consulta28'], ['class'=>'btn btn-primary grid-button']) ?></p>
+          </div>
+        </div>
+      </div>
     </div>
 </div>

@@ -17,6 +17,10 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
+    
+    // formato por defecto del grid
+    public $formatoGrid = "{summary}<br /><br />{items}{pager}";
+    
     public function actions()
     {
         return [
@@ -140,6 +144,24 @@ class SiteController extends Controller
             'descripcion' => 'SELECT COUNT(*) FROM emple',
             'dataProvider' => $provider,
             'columnas' => [],
+        ]);
+    }
+    
+    public function actionConsulta6a() {
+        $provider = new ActiveDataProvider([
+            'query' => Emple::find()->select("count(*) as total"),
+            'totalCount'=>1,                
+        ]);
+        
+        // Quita el texto que nos dice los registros activos y el número de registros.
+        $this->formatoGrid = "{items}";
+              
+        return $this->render('_index', [
+            'titulo' => 'Consulta 6a',
+            'descripcion' => 'SELECT COUNT(*) FROM emple',
+            'dataProvider' => $provider,
+            'columnas' => ['total'],
+            
         ]);
     }
 
@@ -384,6 +406,24 @@ class SiteController extends Controller
             'descripcion' => "SELECT DISTINCT MONTH(fecha_alt) FROM emple",
             'dataProvider' => $dataProvider,
             'columnas' => ['mes:integer:Mes'],
+        ]);
+    }
+
+    public function actionConsulta28() {
+        $query = Emple::find()->select(["apellido", "dept_no"]);
+
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                    'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 28',
+            'descripcion' => "SELECT apellido, dnombre FROM emple JOIN depart USING(dept_no)",
+            'dataProvider' => $dataProvider,
+            'columnas' => ['apellido', 'deptNo.dnombre'],
         ]);
     }
 

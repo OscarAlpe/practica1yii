@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => $columnas,
-        'layout' => "{summary}<br /><br />{items}{pager}",
+        'layout' => Yii::$app->controller->formatoGrid
     ]); ?>
 
 
