@@ -161,4 +161,22 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta8() {
+        $query = Emple::find()->select("emple.*")->orderBy(["apellido" => SORT_DESC]);
+        
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                  'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 8',
+            'descripcion' => 'SELECT * FROM emple ORDER BY apellido DESC',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
+        ]);
+    }
+
 }
