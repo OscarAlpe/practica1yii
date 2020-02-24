@@ -131,5 +131,14 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Consulta 14</h3>
+            <p>Mostrar los códigos y apellidos de los empleados cuyo salario sea menor que 2000</p>
+            <p><?= Html::a('Consulta 14', ['/site/consulta14'], ['class'=>'btn btn-primary grid-button']) ?></p>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
