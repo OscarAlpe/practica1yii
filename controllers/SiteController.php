@@ -442,4 +442,34 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta31() {
+        $query = Emple::find()->select(["dept_no", "COUNT(emp_no) as total"])->groupBy("dept_no");
+
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 31',
+            'descripcion' => "SELECT dnombre, COUNT(emp_no) FROM emple JOIN depart USING(dept_no) GROUP BY dept_no",
+            'dataProvider' => $dataProvider,
+            'columnas' => ['deptNo.dnombre', 'total:integer:NUMERO_DE_EMPLEADOS'],
+        ]);
+    }
+
+    public function actionConsulta33() {
+        $query = Emple::find()->select(["apellido"])->where("LEFT(apellido, 1) = 'A'");
+
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 31',
+            'descripcion' => "SELECT apellido FROM emple WHERE LEFT(apellido, 1) = 'A'",
+            'dataProvider' => $dataProvider,
+            'columnas' => ['apellido'],
+        ]);
+    }
+
 }

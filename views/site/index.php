@@ -208,4 +208,24 @@ use yii\helpers\Html;
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Consulta 31</h3>
+            <p>Listar el número de empleados por departamento que salga el nombre del departamento</p>
+            <p><?= Html::a('Consulta 31', ['/site/consulta31'], ['class'=>'btn btn-primary grid-button']) ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Consulta 33</h3>
+            <p>Seleccionar de la tabla EMPLE los empleados cuyo apellido empiece por 'A'. Listar el apellido de los empleados</p>
+            <p><?= Html::a('Consulta 33', ['/site/consulta33'], ['class'=>'btn btn-primary grid-button']) ?></p>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
