@@ -291,4 +291,22 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionConsulta15() {
+        $query = Emple::find()->select(["emple.*"])->where(["BETWEEN","salario","1500","2500"]);
+
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                    'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 14',
+            'descripcion' => 'SELECT * FROM emple WHERE salario BETWEEN 1500 AND 2500',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
+        ]);
+    }
+
 }
