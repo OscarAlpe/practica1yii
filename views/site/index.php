@@ -149,5 +149,14 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>Consulta 16</h3>
+            <p>Mostrar los datos de los empleados cuyo oficio sea 'ANALISTA'</p>
+            <p><?= Html::a('Consulta 16', ['/site/consulta16'], ['class'=>'btn btn-primary grid-button']) ?></p>
+          </div>
+        </div>
+      </div>
     </div>
 </div>

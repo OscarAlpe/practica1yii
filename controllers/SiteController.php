@@ -302,8 +302,26 @@ class SiteController extends Controller
         ]);
         
         return $this->render('_index', [
-            'titulo' => 'Consulta 14',
+            'titulo' => 'Consulta 15',
             'descripcion' => 'SELECT * FROM emple WHERE salario BETWEEN 1500 AND 2500',
+            'dataProvider' => $dataProvider,
+            'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
+        ]);
+    }
+
+    public function actionConsulta16() {
+        $query = Emple::find()->select(["emple.*"])->where(["=","oficio","ANALISTA"]);
+
+        $dataProvider = new ActiveDataProvider([
+                'query' => $query,
+                'pagination' => [
+                    'pageSize' => 2,
+                ],
+        ]);
+        
+        return $this->render('_index', [
+            'titulo' => 'Consulta 16',
+            'descripcion' => "SELECT * FROM emple WHERE oficio = 'ANALISTA'",
             'dataProvider' => $dataProvider,
             'columnas' => ['emp_no', 'apellido', 'oficio', 'dir', 'fecha_alt', 'salario', 'comision', 'dept_no'],
         ]);
