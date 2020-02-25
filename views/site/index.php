@@ -4,9 +4,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 
 ?>
-<div class="container" style="width: 750px; margin: 0 auto;">
+<div class="container-fluid" style="margin: 5em;">
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 1</h3>
@@ -15,7 +15,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 2</h3>
@@ -24,7 +24,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 3</h3>
@@ -33,9 +33,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 4</h3>
@@ -44,7 +42,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 5</h3>
@@ -53,7 +51,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 6</h3>
@@ -64,7 +62,7 @@ use yii\helpers\Html;
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 7</h3>
@@ -73,7 +71,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 8</h3>
@@ -82,7 +80,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 9</h3>
@@ -91,9 +89,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 10</h3>
@@ -102,7 +98,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 11</h3>
@@ -111,7 +107,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 12</h3>
@@ -122,7 +118,7 @@ use yii\helpers\Html;
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 13</h3>
@@ -131,7 +127,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 14</h3>
@@ -140,7 +136,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 15</h3>
@@ -149,9 +145,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 16</h3>
@@ -160,7 +154,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 17</h3>
@@ -169,7 +163,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 22</h3>
@@ -180,7 +174,7 @@ use yii\helpers\Html;
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 24</h3>
@@ -189,7 +183,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 28</h3>
@@ -198,7 +192,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 30</h3>
@@ -207,9 +201,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 31</h3>
@@ -218,7 +210,7 @@ use yii\helpers\Html;
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
           <div class="caption">
             <h3>Consulta 33</h3>
