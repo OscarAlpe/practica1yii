@@ -4,7 +4,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 
 ?>
-<div class="container-fluid" style="margin: 5em;">
+<div class="container-fluid">
     <div class="row">
       <div class="col-lg-2 col-md-12">
         <div class="thumbnail">
